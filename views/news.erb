@@ -23,7 +23,39 @@
   <body>
 
     <div class="container mt-5">
-      <h1>News</h1>
+      <h1>Information</h1>
+    </div>
+
+    <div class="container mt-5">
+      <form action="/">
+        <button type="submit" class="btn btn-primary">Go Back</button>
+      </form>
+    </div>
+
+    <div class="container mt-5">
+      <h2>Weather</h1>
+    </div>
+
+    <div class="container mt-5">
+      <% i = 1 %>
+      <p>In <%= @city %>, it is currently <%= @current_temp %> degrees and <%= @current_state %>.</p>
+      <% for forecast in @forecast_array %>
+        <p>Day <%= i %>: A high temperature of <%= forecast["temperatureHigh"] %> and <%= forecast["summary"] %></p>
+        <% i += 1 %>
+      <% end %>
+    </div>
+
+    <div class="container mt-5">
+      <h2>News</h1>
+    </div>
+
+    <% for article in @top_news["articles"] %>
+        <div class="container mt-5">
+          <h5><%= article["title"] %></h5>
+          <div><a href=<%= article["url"] %>>Link</a></div>
+          <img src=<%= article["urlToImage"] %>>
+        </div>
+    <% end %>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

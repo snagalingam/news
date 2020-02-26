@@ -1,0 +1,17 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h2 {
+  color:  purple;
+}
+
+img {
+  border-radius: 8px;
+  width: 200px;
+}
+
+.btn-primary {
+    background-color: #604BE8;
+    border-color: #604BE8;
+}
